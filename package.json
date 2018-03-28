@@ -1,0 +1,27 @@
+{
+  "name": "multiroom-chat",
+  "version": "1.0.0",
+  "description": "Comunicação bidirecional cliente/servidor - socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeMarianelli/multiroom-chat.git"
+  },
+  "keywords": [],
+  "author": "Guilherme Marianelli <gmarianelli@aol.com> (http://www.gmfreelancer.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuilhermeMarianelli/multiroom-chat/issues"
+  },
+  "homepage": "https://github.com/GuilhermeMarianelli/multiroom-chat#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-validator": "^5.0.3"
+  }
+}

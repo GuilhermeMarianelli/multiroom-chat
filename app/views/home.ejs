@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html lang="pt-BR">
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+	<style type="text/css">
+		h2{
+			font-family: 'Bowlby One', cursive;
+			letter-spacing: 1px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row justify-content-md-center align-items-center">
+			<h2>#GaloChat</h2>
+		</div>
+		<div class="row justify-content-md-center align-items-center">
+			<img src="img/atletico-mineiro.png" alt="escudo do Atlético Mineiro" class="img-fluid" width="200px" height="200px">
+		</div>
+		<div class="row justify-content-md-center align-items-center">
+			<div class="col-4">
+				<% if(erros){ %>
+				<div class="alert alert-danger">
+					<% for(var i = 0; i < erros.length; i++) { %>
+					<p><strong>Danger! </strong><%= erros[i].msg %></p>
+					<% } %>
+				</div>
+				<% } %>
+				<form method="post" action="/chat">
+					<div class="form-group">
+						<input type="text" name="nickname" id="nickname" class="form-control" placeholder="Type your nickname">
+					</div>
+					<button type="submit" class="btn btn-dark btn-block">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
