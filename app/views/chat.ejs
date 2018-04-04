@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Chat</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.align-bottom{
+			position: fixed;
+			bottom: 0px;
+		}
+		#messages{
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		#messages li{
+			padding: 5px 10px;
+		}
+		#messages li:nht-child(odd){
+			background-color: #eee;
+		}
+	</style>
 </head>
 <body>
 <div class="container-fluid">
-	chat
+	<div class="row">
+		<div class="col-12">
+			<ul id="messages"></ul>
+		</div>
+	</div>
+	<div class="row align-bottom">
+		<div class="col-12">
+			<form class="form-inline"> 
+				<input type="text" name="m" id="m" class="form-control">
+				<button type="submit" class="btn btn-primary"> >> </button>
+			</form>
+		</div>
+	</div>
 </div>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	
+</script>
 </body>
 </html>
