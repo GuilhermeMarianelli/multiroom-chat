@@ -5,8 +5,11 @@ module.exports.chat = function(application,req,res){
 	var erros = req.validationErrors();
 	if(erros){
 		res.render('home',{erros:erros});
+		return;
 	}else{
-		res.render('chat');	
+		//falar - fazer um pedido de execução
+		application.get('io').emit('msgParaCliente',{apelido:data.nickname, msg:' acabou de entrar no chat.'});
+		res.render('chat',{data:data});	
 	}
 }
 
